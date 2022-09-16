@@ -1,0 +1,7 @@
+.routeMainContainer {
+  margin-top: 100px;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  background: pink;
+}

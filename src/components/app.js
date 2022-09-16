@@ -1,6 +1,6 @@
 import { h } from "preact";
 import { Router } from "preact-router";
-
+import style from "./app.css";
 import Header from "./header";
 import LazyLoading from "./lazyload";
 // Code-splitting is automated for `routes` directory
@@ -11,12 +11,14 @@ const App = () => (
   <div id="app">
     <Header />
     <LazyLoading />
-    <div style="margin-top:100px;"></div>
-    <Router>
-      <Home path="/" />
-      <Profile path="/profile/" user="me" />
-      <Profile path="/profile/:user" />
-    </Router>
+
+    <div class={style.routeMainContainer}>
+      <Router>
+        <Home path="/" />
+        <Profile path="/profile/" user="me" />
+        <Profile path="/profile/:user" />
+      </Router>
+    </div>
   </div>
 );
 
