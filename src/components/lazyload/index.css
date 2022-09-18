@@ -1,4 +1,6 @@
 .lazyLoadMainContainer {
+  min-width: 600px;
+  max-width: 850px;
 }
 .mainImageContainer {
   position: relative;
@@ -11,6 +13,7 @@
   border: 1px solid LightGray;
   border-radius: 4px;
   padding: 10px;
+  overflow: scroll;
 }
 .empty {
   display: none;
