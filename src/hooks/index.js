@@ -26,9 +26,9 @@ const UseSearchText = (query, pageNumber) => {
       cancelToken: new axios.CancelToken((c) => (cancel = c)),
     })
       .then((res) => {
-        console.log("got the data");
-        console.log(res.data.results);
-        console.log("print", res.results);
+        /* console.log("got the data"); */
+        /* console.log(res.data.results); */
+        /* console.log("print", res.results); */
         setBooks((prevBooks) => {
           return [
             ...prevBooks,
@@ -39,15 +39,14 @@ const UseSearchText = (query, pageNumber) => {
         setLoading(false);
       })
       .catch((e) => {
-        console.log(e);
         if (axios.isCancel(e)) return;
-        console.log("found an error");
+        /* console.log("found an error"); */
         setError(true);
       });
     return () => cancel();
   }, [query, pageNumber]);
 
-  console.log("return value", books);
+  /* console.log("return value", books); */
   return { loading, error, books, hasMore };
 };
 

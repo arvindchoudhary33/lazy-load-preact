@@ -17,13 +17,13 @@ const LazyLoading = () => {
       observer.current = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting && hasMore) {
           setPageNumber((prevPageNumber) => prevPageNumber + 1);
-          console.log("visible");
+          /* console.log("visible"); */
         }
       });
       if (node) {
         observer.current.observe(node);
       }
-      console.log(node);
+      /* console.log(node); */
     },
     [loading, hasMore]
   );
@@ -32,11 +32,16 @@ const LazyLoading = () => {
     setQuery(e.target.value);
     setPageNumber(1);
   };
-  console.log(loading, error, books, hasMore);
+  /* console.log(loading, error, books, hasMore); */
   return (
     <div class={style.lazyLoadMainContainer}>
       <p>Loading lazy</p>
-      <input type="text" value={query} onChange={handleSearch} />
+      <input
+        type="text"
+        value={query}
+        onChange={handleSearch}
+        placeholder="Enter keyword to search.."
+      />
       <div class={isInput ? style.mainImageContainer : null}>
         {books.map((book, index) => {
           if (books.length === index + 1) {

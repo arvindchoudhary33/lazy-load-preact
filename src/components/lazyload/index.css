@@ -1,13 +1,13 @@
 .lazyLoadMainContainer {
-  position: absolute;
 }
 .mainImageContainer {
-  margin-left: 20px;
+  position: relative;
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 10px;
   row-gap: 10px;
   align-items: center;
+  margin-top: 20px;
   border: 1px solid LightGray;
   border-radius: 4px;
   padding: 10px;
@@ -17,6 +17,6 @@
 }
 
 .imageClass {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 }

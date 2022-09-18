@@ -28,9 +28,11 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "chakra-ui": "^0.3.9",
     "preact": "^10.3.2",
     "preact-render-to-string": "^5.1.4",
-    "preact-router": "^3.2.1"
+    "preact-router": "^3.2.1",
+    "react-router-dom": "^6.4.0"
   },
   "jest": {
     "preset": "jest-preset-preact",
