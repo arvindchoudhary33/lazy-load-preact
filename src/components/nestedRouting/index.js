@@ -13,7 +13,7 @@ import {
 const NestedRouting = () => {
   return (
     <div>
-      <p>Books List</p>
+      <p>Default</p>
     </div>
   );
 };

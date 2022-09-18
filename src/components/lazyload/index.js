@@ -1,3 +1,4 @@
+import { Input } from "@chakra-ui/react";
 import { h } from "preact";
 import { useState, useRef, useCallback } from "preact/hooks";
 import UseSearchText from "../../hooks/";
@@ -32,11 +33,12 @@ const LazyLoading = () => {
     setQuery(e.target.value);
     setPageNumber(1);
   };
+  console.log(books);
   /* console.log(loading, error, books, hasMore); */
   return (
     <div class={style.lazyLoadMainContainer}>
-      <p>Loading lazy</p>
-      <input
+      <p style="margin-bottom:10px;">Lazy load something..</p>
+      <Input
         type="text"
         value={query}
         onChange={handleSearch}

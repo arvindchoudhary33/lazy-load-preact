@@ -1,14 +1,14 @@
 import { h } from "preact";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import style from "./style.css";
-
+import "./style.css";
 const Header = () => (
   <header class={style.header}>
     <h1>Preact App</h1>
     <nav>
-      <Link activeClassName={style.active} to="/">
+      <NavLink activeClassName="active" to="/">
         Home
-      </Link>
+      </NavLink>
       <Link activeClassName={style.active} to="/profile">
         Me
       </Link>
@@ -17,6 +17,9 @@ const Header = () => (
       </Link>
       <Link activeClassName={style.active} to="/nr">
         Routing
+      </Link>
+      <Link activeClassName={style.active} to="/tabbar">
+        TabBar
       </Link>
     </nav>
   </header>
