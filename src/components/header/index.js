@@ -6,7 +6,7 @@ const Header = () => (
   <header class={style.header}>
     <h1>Preact App</h1>
     <nav>
-      <NavLink activeClassName="active" to="/">
+      <NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/">
         Home
       </NavLink>
       <Link activeClassName={style.active} to="/profile">
@@ -20,6 +20,9 @@ const Header = () => (
       </Link>
       <Link activeClassName={style.active} to="/tabbar">
         TabBar
+      </Link>
+      <Link activeClassName={style.active} to="/graphdemo">
+        Graph
       </Link>
     </nav>
   </header>

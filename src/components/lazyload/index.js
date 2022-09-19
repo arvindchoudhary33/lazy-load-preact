@@ -18,13 +18,11 @@ const LazyLoading = () => {
       observer.current = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting && hasMore) {
           setPageNumber((prevPageNumber) => prevPageNumber + 1);
-          /* console.log("visible"); */
         }
       });
       if (node) {
         observer.current.observe(node);
       }
-      /* console.log(node); */
     },
     [loading, hasMore]
   );

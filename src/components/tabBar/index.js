@@ -8,7 +8,7 @@ const TabBar = () => {
   console.log(value.one);
   return (
     <div style="width:500px; height:200px;">
-      <Tabs isFitted variant="soft-rounded" style="margin-bottom:20px;">
+      <Tabs isFitted variant="enclosed" style="margin-bottom:20px;">
         <TabList>
           <Tab
             onClick={() => setValue({ one: true, two: false, three: false })}

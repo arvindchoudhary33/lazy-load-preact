@@ -8,6 +8,7 @@ import TabBar from "./tabBar";
 // Code-splitting is automated for `routes` directory
 import Home from "../routes/home";
 import Profile from "../routes/profile";
+import GraphDemo from "../components/graphDemo";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import RoutesLayout from "./nestedRouting/routesLayout";
@@ -28,6 +29,7 @@ const App = () => (
               <Route path="nr/efg" element={<LazyLoading />} />
             </Route>
             <Route path="/tabbar" element={<TabBar />} />
+            <Route path="/graphdemo" element={<GraphDemo />} />
           </Routes>
         </Router>
       </div>
